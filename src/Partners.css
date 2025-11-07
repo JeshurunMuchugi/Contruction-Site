@@ -1,0 +1,131 @@
+.partners {
+  background: white;
+  padding: 80px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.partners-content {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+
+.partners-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.partners-logos {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  flex: 1;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Bezify Icon */
+.bezify-lines {
+  width: 20px;
+  height: 16px;
+  background: linear-gradient(45deg, #FF4B00 0%, #FF4B00 33%, #1a1a1a 33%, #1a1a1a 66%, #FF4B00 66%);
+  transform: skew(-15deg);
+}
+
+/* Taskbes Icon */
+.taskbes-shape {
+  width: 24px;
+  height: 24px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  position: relative;
+}
+
+.taskbes-shape::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: -8px;
+  width: 12px;
+  height: 12px;
+  background: #FF4B00;
+  border-radius: 50%;
+}
+
+/* Appixy Icon */
+.appixy-lines {
+  width: 20px;
+  height: 20px;
+  background: 
+    linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+    linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #FF4B00 75%),
+    linear-gradient(-45deg, transparent 75%, #FF4B00 75%);
+  background-size: 10px 10px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Markeotic Icon */
+.markeotic-shape {
+  width: 24px;
+  height: 20px;
+  background: #FF4B00;
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 30% 100%);
+  position: relative;
+}
+
+.markeotic-shape::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  background: #1a1a1a;
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 30% 100%);
+}
+
+/* Fint Icon */
+.fint-circle {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #1a1a1a;
+  border-radius: 50%;
+  position: relative;
+}
+
+.fint-circle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 8px;
+  height: 8px;
+  background: #FF4B00;
+  border-radius: 50%;
+}
