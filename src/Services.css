@@ -59,7 +59,6 @@
   color: #1A1A1A;
   background: #FFFFFF;
   border: 2px solid #1A1A1A;
-  border-radius: 12px;
   padding: 14px 28px;
   cursor: pointer;
   display: flex;
@@ -89,7 +88,7 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 20px;
 }
 
 .service-card {
@@ -106,7 +105,6 @@
 .service-card:hover {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
   transform: translateY(-6px);
-  border-color: #FF6B35;
 }
 
 .card-bg {
@@ -129,14 +127,13 @@
   background: #FFFFFF;
   border-radius: 0;
   transform-origin: top left;
-  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
 }
 
 .service-card:hover .card-overlay {
   transform: scale(0);
-  border-radius: 50%;
-  opacity: 0;
+  border-bottom-right-radius: 200%;
 }
 
 .card-dark-overlay {
@@ -159,6 +156,9 @@
   position: relative;
   z-index: 2;
   padding: 60px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card-number {
@@ -168,10 +168,10 @@
   background: #1A1A1A;
   color: #FFFFFF;
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  padding: 10px 20px;
-  border-radius: 24px 0 16px 0;
+  padding: 15px 15px;
+  border-radius: 24px 0 0px 0;
   z-index: 3;
   transition: background 0.3s ease;
 }
@@ -181,9 +181,9 @@
 }
 
 .card-icon {
-  width: 100px;
-  height: 100px;
-  margin: 0 0 32px 0;
+  width: 80px;
+  height: 80px;
+  margin: 30px 0 32px 0;
 }
 
 .card-icon img {
@@ -216,6 +216,7 @@
   line-height: 1.7;
   color: #666666;
   margin: 0 0 32px 0;
+  flex-grow: 1;
   transition: color 0.3s ease;
 }
 
