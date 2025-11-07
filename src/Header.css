@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 280px;
+  padding: 20px 40px;
+  background: white;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: end;
+}
+
+.building-bars {
+  display: flex;
+  align-items: end;
+  gap: 2px;
+}
+
+.bar {
+  width: 6px;
+  border-radius: 1px;
+}
+
+.bar.orange {
+  height: 16px;
+  background: #ff6b35;
+}
+
+.bar.black {
+  height: 12px;
+  background: #1a1a1a;
+}
+
+.bar.tall {
+  height: 20px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.dot {
+  color: #ff6b35;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-item {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #ff6b35;
+}
+
+.dropdown-arrow {
+  font-size: 0.7em;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover .dropdown-arrow {
+  transform: translateY(-1px);
+}
+
+.cta-button {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e55a2b;
+  transform: translateY(-1px);
+}
