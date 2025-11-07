@@ -1,41 +1,78 @@
 .partners {
   background: white;
-  padding: 80px 60px;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 120px 60px;
+  max-width: 1600px;
+  margin: -100px auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .partners-content {
   display: flex;
   align-items: center;
-  gap: 120px;
+  position: relative;
+  height: 120px;
+  overflow: hidden;
 }
 
 .partners-heading {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   color: #1a1a1a;
   font-family: 'Inter', sans-serif;
   margin: 0;
+
+  background: white;
+  padding-right: 60px;
+  padding-left: 100vw;
+  margin-left: -100vw;
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+}
+
+.partners-logos-wrapper {
+  flex: 1;
+  overflow: hidden;
   white-space: nowrap;
 }
 
-.partners-logos {
-  display: flex;
-  align-items: center;
-  gap: 80px;
-  flex: 1;
+.partners-logos-scroll {
+  display: inline-block;
+  animation: scrollLogos 20s linear infinite;
+}
+
+.partners-logos-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
 }
 
 .partner-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  margin-right: 95px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
 }
 
 .logo-icon {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   position: relative;
   display: flex;
   align-items: center;
@@ -43,7 +80,7 @@
 }
 
 .logo-text {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 600;
   color: #1a1a1a;
   font-family: 'Inter', sans-serif;
@@ -51,16 +88,16 @@
 
 /* Bezify Icon */
 .bezify-lines {
-  width: 20px;
-  height: 16px;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(45deg, #FF4B00 0%, #FF4B00 33%, #1a1a1a 33%, #1a1a1a 66%, #FF4B00 66%);
   transform: skew(-15deg);
 }
 
 /* Taskbes Icon */
 .taskbes-shape {
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: 100%;
   background: #1a1a1a;
   border-radius: 4px;
   position: relative;
@@ -79,8 +116,8 @@
 
 /* Appixy Icon */
 .appixy-lines {
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
   background: 
     linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
     linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
@@ -92,8 +129,8 @@
 
 /* Markeotic Icon */
 .markeotic-shape {
-  width: 24px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
   background: #FF4B00;
   clip-path: polygon(0 0, 70% 0, 100% 100%, 30% 100%);
   position: relative;
@@ -112,8 +149,8 @@
 
 /* Fint Icon */
 .fint-circle {
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: 100%;
   border: 3px solid #1a1a1a;
   border-radius: 50%;
   position: relative;
