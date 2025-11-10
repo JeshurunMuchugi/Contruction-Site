@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [progress, setProgress] = useState(100);
+  const [showVideoModal, setShowVideoModal] = useState(false);
   
   const slides = [
     { image: 'https://cdn.prod.website-files.com/66dd27093361c83ddd9d26cb/66e270c5d804518fb96c93f5_Hero%20Image%20v21.jpg', title: '#Construction Project' },
@@ -46,7 +47,7 @@ function Hero() {
             </div>
           </div>
           <div className="title-line line-3">
-            Indu<span className="industry-with-image">stry<video src="https://cdn.prod.website-files.com/66dd27093361c83ddd9d26cb%2F66dd6f8f5feb03b8ce9be394_hero%20video-transcode.mp4" autoPlay loop muted playsInline className="inline-video" /></span>
+            Indu<span className="industry-with-image">stry<video src="https://cdn.prod.website-files.com/66dd27093361c83ddd9d26cb%2F66dd6f8f5feb03b8ce9be394_hero%20video-transcode.mp4" autoPlay loop muted playsInline className="inline-video" onClick={() => setShowVideoModal(true)} /></span>
           </div>
         </h1>
         
@@ -86,6 +87,15 @@ function Hero() {
           </div>
         </div>
       </div>
+      
+      {showVideoModal && (
+        <div className="video-modal" onClick={() => setShowVideoModal(false)}>
+          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal" onClick={() => setShowVideoModal(false)}>×</button>
+            <video src="https://cdn.prod.website-files.com/66dd27093361c83ddd9d26cb%2F66dd6f8f5feb03b8ce9be394_hero%20video-transcode.mp4" controls autoPlay className="modal-video" />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

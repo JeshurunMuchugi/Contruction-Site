@@ -3,6 +3,9 @@ import Hero from './Hero';
 import Partners from './Partners';
 import AboutUs from './AboutUs';
 import Services from './Services';
+import WhyChooseUs from './WhyChooseUs';
+import WorkSpotlight from './WorkSpotlight';
+import Team from './Team';
 import './App.css';
 
 function App() {
@@ -13,6 +16,9 @@ function App() {
       <Partners />
       <AboutUs />
       <Services />
+      <WhyChooseUs />
+      <WorkSpotlight />
+      <Team />
     </div>
   );
 }
